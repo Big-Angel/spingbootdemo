@@ -58,7 +58,8 @@ public class AdminServiceImpl implements AdminService {
         }
     }
 
-    public Admin changeMypwd(String old_password, String new_password, Admin admin) {
+    public Admin changeMypwd(String old_password, String new_password,String account) {
+        Admin admin = adminRepo.findByAccountName(account);
         if (old_password != null && !old_password.isEmpty()) {
             if (admin.checkPassword(old_password)) {
                 admin.setPassword(new_password);

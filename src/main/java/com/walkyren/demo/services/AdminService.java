@@ -1,7 +1,6 @@
 package com.walkyren.demo.services;
 
 import com.walkyren.demo.domain.entity.Admin;
-import org.springframework.stereotype.Service;
 
 /**
  * Author: daxian
@@ -13,5 +12,5 @@ public interface AdminService {
 
     Admin adminAdd(String account, String password);
 
-    Admin changeMypwd(String old_password, String new_password, Admin admin);
+    Admin changeMypwd(String old_password, String new_password,String account);
 }
